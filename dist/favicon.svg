@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Orbit Pond 심볼: 워드마크의 "O"(두꺼운 고리)를 기울어진 궤도가 뒤로 돌아 앞으로 감싸고, 궤도 위에 작은 행성 하나 -->
+  <defs>
+    <!-- 궤도 앞쪽이 O 위를 지나가는 부분에만 배경색 테두리를 둘러, 겹치는 느낌을 냅니다 -->
+    <clipPath id="ring">
+      <circle cx="256" cy="256" r="146"/>
+    </clipPath>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="#05070d"/>
+  <g transform="rotate(-20 256 256)">
+    <!-- 궤도의 뒤쪽 절반 (고리 뒤로 지나감) -->
+    <path d="M 40 256 A 216 70 0 0 1 472 256" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" opacity="0.55"/>
+  </g>
+  <!-- O -->
+  <circle cx="256" cy="256" r="112" fill="none" stroke="#ffffff" stroke-width="56"/>
+  <g transform="rotate(-20 256 256)">
+    <!-- 궤도의 앞쪽 절반 -->
+    <path d="M 40 256 A 216 70 0 0 0 472 256" fill="none" stroke="#05070d" stroke-width="30" clip-path="url(#ring)"/>
+    <path d="M 40 256 A 216 70 0 0 0 472 256" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round"/>
+    <!-- 궤도 위의 행성 -->
+    <circle cx="433" cy="296" r="27" fill="#05070d"/>
+    <circle cx="433" cy="296" r="19" fill="#ffd27a"/>
+  </g>
+</svg>
