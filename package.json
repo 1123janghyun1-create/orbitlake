@@ -1,0 +1,27 @@
+{
+  "name": "orbitlake",
+  "version": "1.0.0",
+  "description": "Orbit Pond - High-Fidelity N-Body Universe Gravity Simulator & 3D Celestial Engine",
+  "type": "module",
+  "scripts": {
+    "start": "python server.py",
+    "dev": "python server.py",
+    "serve": "npx serve dist -l 3333",
+    "preview": "python server.py"
+  },
+  "keywords": [
+    "gravity",
+    "n-body",
+    "threejs",
+    "webgl",
+    "astrophysics",
+    "simulation",
+    "space"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/server": "^1.9.2",
+    "@supabase/supabase-js": "^2.119.2"
+  }
+}
