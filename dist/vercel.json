@@ -1,11 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
-  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/((?!assets/|brand/|showcase/|templates/|.*\\.[A-Za-z0-9]+$).*)",
+      "destination": "/"
     }
   ],
   "headers": [
