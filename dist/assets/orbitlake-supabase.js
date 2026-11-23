@@ -424,14 +424,21 @@
 
   // --- Inject Auth Container in Header ---
   function injectAuthContainer() {
-    const navbar = document.querySelector('header.topbar') || document.querySelector('header');
-    if (!navbar || document.getElementById('orbitlake-auth-container')) return;
+    const navbar = document.querySelector('header.topbar') || document.querySelector('header.lp-nav') || document.querySelector('header');
+    if (!navbar) return;
 
-    const container = document.createElement('div');
+    let container = document.getElementById('orbitlake-auth-container');
+    if (container && navbar.contains(container)) return;
+
+    if (container) {
+      container.remove();
+    }
+
+    container = document.createElement('div');
     container.id = 'orbitlake-auth-container';
     container.className = 'orbitlake-auth-wrap';
 
-    const targetWrap = navbar.querySelector('.topbar-actions') || navbar.lastElementChild || navbar;
+    const targetWrap = navbar.querySelector('.topbar-actions') || navbar.querySelector('.lp-nav-right') || navbar.lastElementChild || navbar;
     targetWrap.appendChild(container);
 
     updateUserUI(currentUser);
