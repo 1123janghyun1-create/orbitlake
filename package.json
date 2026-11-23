@@ -1,7 +1,7 @@
 {
   "name": "orbitlake",
   "version": "1.0.0",
-  "description": "Orbit Pond - High-Fidelity N-Body Universe Gravity Simulator & 3D Celestial Engine",
+  "description": "orbitlake - High-Fidelity N-Body Universe Gravity Simulator & 3D Celestial Engine",
   "type": "module",
   "scripts": {
     "start": "python server.py",
